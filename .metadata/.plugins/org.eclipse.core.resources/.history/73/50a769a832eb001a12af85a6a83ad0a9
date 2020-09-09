@@ -1,0 +1,5 @@
+package com.stockmarket.login.security.services;
+
+public class UserHelper {
+
+}

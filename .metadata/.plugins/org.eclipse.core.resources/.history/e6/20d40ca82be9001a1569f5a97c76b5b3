@@ -1,0 +1,5 @@
+package com.sm1.login.security.services;
+
+public class EmailSenderService {
+
+}

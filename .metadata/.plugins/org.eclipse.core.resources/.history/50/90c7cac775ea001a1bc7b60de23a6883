@@ -1,0 +1,38 @@
+package com.sm1.login.controllers;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.awt.PageAttributes.MediaType;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.web.context.WebApplicationContext;
+
+import com.sm1.login.controllers.AuthController;
+import com.sm1.login.models.User;
+@RunWith(SpringRunner.class)
+@WebMvcTest(AuthController.class)
+public class AuthControllerAddUserTest {
+	@Autowired MockMvc mvc;
+    @MockBean UserDetailsService userService;
+    
+    @Autowired
+    private WebApplicationContext webApplicationContext;
+    
+    @Test
+    public void addEmployeeTest() throws Exception {
+    	//this.mvc = webAppContextSetup(webApplicationContext).build();
+    	User emp = new User();
+
+        mvc.perform(get("/api/auth/userDetails")
+            .andExpect(status().isOk());
+    }
+}

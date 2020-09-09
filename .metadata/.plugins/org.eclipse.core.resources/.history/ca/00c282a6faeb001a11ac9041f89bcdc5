@@ -1,0 +1,5 @@
+package com.stockmarket.company.request;
+
+public class CompanyRequest {
+
+}

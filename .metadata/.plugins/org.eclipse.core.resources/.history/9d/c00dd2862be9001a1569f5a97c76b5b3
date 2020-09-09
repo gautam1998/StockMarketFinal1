@@ -1,0 +1,5 @@
+package com.sm1.login.repository;
+
+public interface ConfirmationTokenRepository extends CrudRepository<ConfirmationToken, String> {
+    ConfirmationToken findByConfirmationToken(String confirmationToken);
+}
